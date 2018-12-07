@@ -1,12 +1,37 @@
-page 50100 "AIR TestApp"
+page 50100 "AIR Test Custom Vision"
 {
-    PageType = Card;
+    PageType = List;
+    Caption = 'AIR Test Custom Vision Integration';
+    SourceTable = Item;
+
+    UsageCategory = Lists;
+    ApplicationArea = All;
+
+    layout
+    {
+        area(Content)
+        {
+            repeater(Group)
+            {
+                field("No."; "No.")
+                {
+                    ApplicationArea = All;
+                }
+                field(Description; Description)
+                {
+                    ApplicationArea = All;
+                }
+
+            }
+        }
+    }
+
 
     actions
     {
         area(Processing)
         {
-            action("Test Image from Url")
+            action("Tag Image from Url")
             {
                 ApplicationArea = All;
                 Image = TestReport;
@@ -16,10 +41,14 @@ page 50100 "AIR TestApp"
                     TestAppUrlMode();
                 end;
             }
-            action("Test Image from Media")
+            action("Tag Image from Media")
             {
                 ApplicationArea = All;
                 Image = TestReport;
+
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedCategory = Process;
 
                 trigger OnAction()
                 begin
