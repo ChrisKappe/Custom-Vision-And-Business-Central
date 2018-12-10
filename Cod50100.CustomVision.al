@@ -24,13 +24,13 @@ codeunit 50100 "AIR Custom Vision"
     local procedure GetBaseURLForCustomVisionServiceIfYouHavePictureURL(): Text
     var
     begin
-        exit('https://southcentralus.api.cognitive.microsoft.com/customvision/v2.0/Prediction/f537e6de-399b-4bfc-aec7-c3f94620b50d/url')
+        exit('https://southcentralus.api.cognitive.microsoft.com/customvision/v2.0/Prediction/656b204c-17f1-4e95-b2aa-dc17f4038688/url')
     end;
 
     local procedure GetBaseURLForCustomVisionServiceIfYouHavePictureFile(): Text
     var
     begin
-        exit('https://southcentralus.api.cognitive.microsoft.com/customvision/v2.0/Prediction/f537e6de-399b-4bfc-aec7-c3f94620b50d/image')
+        exit('https://southcentralus.api.cognitive.microsoft.com/customvision/v2.0/Prediction/656b204c-17f1-4e95-b2aa-dc17f4038688/image')
     end;
 
     local procedure GetPredictionKey(): Text
